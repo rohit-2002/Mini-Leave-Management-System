@@ -12,6 +12,11 @@ dotenv.config();
 const app = express();
 app.use(bodyParser.json());
 
+// Root route
+app.get("/", (req, res) => {
+  res.send("Mini Leave Management System API is running!");
+});
+
 app.use("/api/employees", employeeRoutes);
 app.use("/api/leaves", leaveRoutes);
 app.use(errorHandler);
