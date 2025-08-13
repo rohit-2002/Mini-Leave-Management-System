@@ -34,3 +34,4 @@ docker-compose.override.yml
 # Optional: Ignore build artifacts
 /dist
 /build
+.vercel
