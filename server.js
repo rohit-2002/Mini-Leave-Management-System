@@ -4,10 +4,10 @@ import bodyParser from "body-parser";
 import employeeRoutes from "./src/routes/employees.js";
 import leaveRoutes from "./src/routes/leaves.js";
 import errorHandler from "./src/middlewares/errorHandler.js";
+import dotenv from "dotenv";
 
-if (process.env.NODE_ENV !== "production") {
-  import("dotenv").then((dotenv) => dotenv.config());
-}
+// Load .env variables immediately
+dotenv.config();
 
 const app = express();
 app.use(bodyParser.json());
