@@ -3,7 +3,7 @@
 A simple MVP backend for managing employee leave requests, balances, and approvals for a startup HR team.
 
 ---
-Live Backend Url: [Mini Leave Management System](https://your-vercel-project.vercel.app)
+Live Backend Url: [Mini Leave Management System](https://mini-leave-management-system.vercel.app/)
 ## Features
 
 - Add employees (Name, Email, Department, Joining Date)
