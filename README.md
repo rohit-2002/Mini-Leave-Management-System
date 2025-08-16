@@ -3,7 +3,13 @@
 A simple MVP backend for managing employee leave requests, balances, and approvals for a startup HR team.
 
 ---
+<<<<<<< HEAD
 Live Backend Url: [Mini Leave Management System](https://mini-leave-management-system.vercel.app/)
+=======
+
+Live Backend Url: [Mini Leave Management System](https://mini-leave-management-system.vercel.app/)
+
+>>>>>>> b6a850d (Images added)
 ## Features
 
 - Add employees (Name, Email, Department, Joining Date)
@@ -41,17 +47,22 @@ Live Backend Url: [Mini Leave Management System](https://mini-leave-management-s
 git clone https://github.com/rohit-2002/Mini-Leave-Management-System.git
 cd Mini-Leave-Management-System
 ```
+
 2. **Install dependencies:**
    ```bash
     npm install
+   ```
 3. **Set environment variables in .env:**
    ```bash
     PORT=4000
     MONGO_URI=mongodb://localhost:27017/leave-management
     DEFAULT_ANNUAL_LEAVE_DAYS=18
+   ```
 4. **Start server:**
    ```bash
     npm start
+   ```
+
 ## API Endpoints
 
 ### 1. Add an Employee
@@ -68,6 +79,7 @@ cd Mini-Leave-Management-System
   "joiningDate": "2025-01-01"
 }
 ```
+
 **Responce:**
 
 ```
@@ -81,7 +93,8 @@ cd Mini-Leave-Management-System
     "__v": 0
 }
 ```
-### 2.  Apply for Leave
+
+### 2. Apply for Leave
 
 **POST** `http://localhost:4000/api/leaves/apply`
 
@@ -92,6 +105,7 @@ cd Mini-Leave-Management-System
   "endDate": "2025-02-12"
 }
 ```
+
 **Responce:**
 
 ```
@@ -104,6 +118,7 @@ cd Mini-Leave-Management-System
     "__v": 0
 }
 ```
+
 ### 3. Approve Leave
 
 **PUT** `http://localhost:4000/api/leaves/689c4342848ca97cd0d2a883/approve`
@@ -140,10 +155,13 @@ cd Mini-Leave-Management-System
     "leaveBalance": 17
 }
 ```
+
 ### 5. Fetch Employees details
+
 **GET** `http://localhost:4000/api/employees`
 
 **Responce:**
+
 ```
 [
     {
@@ -160,25 +178,28 @@ cd Mini-Leave-Management-System
 ```
 
 ### Edge Cases Handled
-- Leave applied before joining date  
-- Leave requested exceeds available balance  
-- Overlapping leave requests  
-- Employee not found  
-- Invalid date ranges (end date before start date)  
-- Duplicate employee email  
+
+- Leave applied before joining date
+- Leave requested exceeds available balance
+- Overlapping leave requests
+- Employee not found
+- Invalid date ranges (end date before start date)
+- Duplicate employee email
 - Negative or zero leave days
 
 ### Assumptions
-- Each employee starts with 20 leave days  
-- Weekends/holidays not excluded from leave count  
-- No authentication or authorization included  
-- Leaves can only be applied for future dates  
+
+- Each employee starts with 20 leave days
+- Weekends/holidays not excluded from leave count
+- No authentication or authorization included
+- Leaves can only be applied for future dates
 
 ### Potential Improvements
-- Add auth & roles  
-- Frontend dashboard  
-- Handle weekends/holidays  
-- Email notifications  
-- Audit logs  
-- Pagination/filtering  
-- MongoDB transactions  
+
+- Add auth & roles
+- Frontend dashboard
+- Handle weekends/holidays
+- Email notifications
+- Audit logs
+- Pagination/filtering
+- MongoDB transactions
